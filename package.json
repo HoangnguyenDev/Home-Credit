@@ -1,0 +1,73 @@
+{
+  "name": "home-credit-vietnam-extension",
+  "version": "1.0.0",
+  "description": "Chrome Extension chính thức của Home Credit Vietnam - Tài chính số toàn diện",
+  "main": "manifest.json",
+  "scripts": {
+    "build": "echo 'Building extension...' && npm run copy-icons",
+    "copy-icons": "echo 'Copy icon files to icons/ directory'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'Linting extension files...'",
+    "package": "echo 'Creating extension package for Chrome Web Store'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "home-credit",
+    "vietnam",
+    "finance",
+    "loan",
+    "credit-card",
+    "paylater",
+    "financial-services"
+  ],
+  "author": "Home Credit Vietnam",
+  "license": "PROPRIETARY",
+  "homepage": "https://www.homecredit.vn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homecredit-vn/chrome-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/homecredit-vn/chrome-extension/issues",
+    "email": "info@homecredit.vn"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 88",
+    "Edge >= 88"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "files": [
+    "manifest.json",
+    "popup.html",
+    "popup.css", 
+    "popup.js",
+    "background.js",
+    "content.js",
+    "content.css",
+    "icons/",
+    "README.md"
+  ],
+  "extensionInfo": {
+    "manifestVersion": 3,
+    "permissions": [
+      "storage",
+      "activeTab",
+      "notifications",
+      "alarms"
+    ],
+    "hostPermissions": [
+      "https://www.homecredit.vn/*",
+      "https://api.homecredit.vn/*"
+    ],
+    "categories": [
+      "Finance",
+      "Productivity",
+      "Shopping"
+    ]
+  }
+}

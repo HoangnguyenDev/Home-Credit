@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Home Credit Vietnam",
+  "version": "2.1.0",
+  "description": "Tài chính thông minh - Quản lý vay, theo dõi chi tiêu, kiểm tra điểm tín dụng với AI. Hỗ trợ toàn diện từ Home Credit Vietnam.",
+  "author": "Home Credit Vietnam",
+  "homepage_url": "https://www.homecredit.vn/",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Home Credit Vietnam",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://www.homecredit.vn/*",
+    "https://api.homecredit.vn/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*",
+        "assets/*",
+        "popup.html",
+        "popup.css",
+        "popup.js",
+        "features/*.js",
+        "features/*.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline';"
+  }
+}

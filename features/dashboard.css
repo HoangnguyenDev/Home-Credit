@@ -1,0 +1,665 @@
+/* Financial Health Dashboard Styles */
+
+.hc-dashboard-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 999999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    animation: hc-fadeIn 0.3s ease !important;
+}
+
+.hc-dashboard-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    backdrop-filter: blur(6px) !important;
+}
+
+.hc-dashboard-content {
+    position: relative !important;
+    background: white !important;
+    border-radius: 20px !important;
+    width: 95vw !important;
+    max-width: 1000px !important;
+    max-height: 95vh !important;
+    overflow-y: auto !important;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4) !important;
+    animation: hc-slideUp 0.5s ease !important;
+}
+
+.hc-dashboard-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 28px !important;
+    background: var(--hc-gradient) !important;
+    color: white !important;
+    border-radius: 20px 20px 0 0 !important;
+    position: relative !important;
+}
+
+.hc-dashboard-header::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dashboardPattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dashboardPattern)"/></svg>') !important;
+    opacity: 0.4 !important;
+}
+
+.hc-dashboard-header h3 {
+    margin: 0 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Health Score Card */
+.hc-health-score-card {
+    display: flex !important;
+    align-items: center !important;
+    gap: 32px !important;
+    padding: 32px !important;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%) !important;
+    border-radius: 16px !important;
+    margin: 24px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+.hc-score-circle {
+    position: relative !important;
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 50% !important;
+    border: 6px solid #e9ecef !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: white !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.hc-score-emoji {
+    font-size: 28px !important;
+    margin-bottom: 4px !important;
+}
+
+.hc-score-number {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+
+.hc-score-label {
+    font-size: 11px !important;
+    color: #666 !important;
+    text-align: center !important;
+    margin-top: 4px !important;
+}
+
+.hc-score-description h4 {
+    margin: 0 0 12px 0 !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+}
+
+.hc-score-description p {
+    margin: 0 !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    line-height: 1.5 !important;
+}
+
+/* Overview Grid */
+.hc-overview-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 0 24px 24px 24px !important;
+}
+
+.hc-overview-card {
+    background: white !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #f0f2f5 !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+}
+
+.hc-overview-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.hc-card-icon {
+    font-size: 32px !important;
+    width: 60px !important;
+    height: 60px !important;
+    background: var(--hc-bg-light) !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.hc-card-content {
+    flex: 1 !important;
+}
+
+.hc-card-title {
+    font-size: 14px !important;
+    color: #666 !important;
+    margin-bottom: 4px !important;
+    font-weight: 500 !important;
+}
+
+.hc-card-value {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: var(--hc-primary) !important;
+}
+
+/* Tabs - reuse from calculator */
+.hc-dashboard-tabs {
+    display: flex !important;
+    background: #f8f9ff !important;
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+.hc-tab-btn {
+    flex: 1 !important;
+    padding: 18px 16px !important;
+    background: none !important;
+    border: none !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #666 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    border-bottom: 3px solid transparent !important;
+}
+
+.hc-tab-btn.active {
+    color: var(--hc-primary) !important;
+    border-bottom-color: var(--hc-primary) !important;
+    background: white !important;
+}
+
+.hc-tab-content {
+    display: none !important;
+}
+
+.hc-tab-content.active {
+    display: block !important;
+}
+
+/* Analysis Section */
+.hc-analysis-section {
+    padding: 24px !important;
+}
+
+.hc-analysis-section h4 {
+    margin: 0 0 24px 0 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+}
+
+.hc-metric-card {
+    background: white !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #f0f2f5 !important;
+}
+
+.hc-metric-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 12px !important;
+}
+
+.hc-metric-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+}
+
+.hc-metric-status {
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.hc-metric-status.good {
+    background: rgba(76, 175, 80, 0.1) !important;
+    color: #4CAF50 !important;
+}
+
+.hc-metric-status.warning {
+    background: rgba(255, 193, 7, 0.1) !important;
+    color: #FFC107 !important;
+}
+
+.hc-metric-status.danger {
+    background: rgba(244, 67, 54, 0.1) !important;
+    color: #F44336 !important;
+}
+
+.hc-metric-value {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: var(--hc-primary) !important;
+    margin-bottom: 12px !important;
+}
+
+.hc-metric-bar {
+    height: 8px !important;
+    background: #e9ecef !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    margin-bottom: 12px !important;
+}
+
+.hc-metric-fill {
+    height: 100% !important;
+    border-radius: 4px !important;
+    transition: width 0.8s ease !important;
+}
+
+.hc-metric-advice {
+    font-size: 14px !important;
+    color: #666 !important;
+    line-height: 1.4 !important;
+}
+
+/* Expenses Breakdown */
+.hc-expenses-breakdown {
+    padding: 24px !important;
+    border-top: 1px solid #f0f2f5 !important;
+}
+
+.hc-expenses-breakdown h4 {
+    margin: 0 0 20px 0 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+}
+
+.hc-expense-chart {
+    background: white !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+.hc-expense-item {
+    display: grid !important;
+    grid-template-columns: 1fr auto auto !important;
+    gap: 16px !important;
+    align-items: center !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #f0f2f5 !important;
+}
+
+.hc-expense-item:last-child {
+    border-bottom: none !important;
+}
+
+.hc-expense-label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.hc-expense-color {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+}
+
+.hc-expense-name {
+    font-weight: 500 !important;
+    color: #333 !important;
+}
+
+.hc-expense-amount {
+    font-weight: 600 !important;
+    color: var(--hc-primary) !important;
+}
+
+.hc-expense-percent {
+    font-size: 14px !important;
+    color: #666 !important;
+}
+
+/* Recommendations */
+.hc-recommendations-list {
+    padding: 24px !important;
+}
+
+.hc-no-recommendations {
+    text-align: center !important;
+    padding: 48px 24px !important;
+}
+
+.hc-success-icon {
+    font-size: 64px !important;
+    margin-bottom: 16px !important;
+}
+
+.hc-no-recommendations h4 {
+    margin: 0 0 12px 0 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: var(--hc-success) !important;
+}
+
+.hc-recommendation-card {
+    display: flex !important;
+    gap: 20px !important;
+    background: white !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 16px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+    border-left: 4px solid transparent !important;
+}
+
+.hc-recommendation-card.high {
+    border-left-color: #F44336 !important;
+    background: rgba(244, 67, 54, 0.02) !important;
+}
+
+.hc-recommendation-card.medium {
+    border-left-color: #FFC107 !important;
+    background: rgba(255, 193, 7, 0.02) !important;
+}
+
+.hc-recommendation-card.low {
+    border-left-color: #4CAF50 !important;
+    background: rgba(76, 175, 80, 0.02) !important;
+}
+
+.hc-rec-icon {
+    font-size: 32px !important;
+    width: 60px !important;
+    height: 60px !important;
+    background: var(--hc-bg-light) !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.hc-rec-content {
+    flex: 1 !important;
+}
+
+.hc-rec-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 8px !important;
+}
+
+.hc-rec-header h5 {
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+}
+
+.hc-rec-priority {
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+
+.hc-recommendation-card.high .hc-rec-priority {
+    background: rgba(244, 67, 54, 0.1) !important;
+    color: #F44336 !important;
+}
+
+.hc-recommendation-card.medium .hc-rec-priority {
+    background: rgba(255, 193, 7, 0.1) !important;
+    color: #FFC107 !important;
+}
+
+.hc-recommendation-card.low .hc-rec-priority {
+    background: rgba(76, 175, 80, 0.1) !important;
+    color: #4CAF50 !important;
+}
+
+.hc-rec-content p {
+    margin: 0 0 16px 0 !important;
+    color: #666 !important;
+    line-height: 1.5 !important;
+}
+
+.hc-rec-action {
+    background: var(--hc-gradient) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.hc-rec-action:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3) !important;
+}
+
+/* Goals Section */
+.hc-goals-section {
+    padding: 24px !important;
+}
+
+.hc-goals-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+    margin-bottom: 32px !important;
+}
+
+.hc-goal-category h5 {
+    margin: 0 0 16px 0 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+}
+
+.hc-goals-list {
+    margin-bottom: 16px !important;
+}
+
+.hc-goal-item {
+    background: white !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #f0f2f5 !important;
+}
+
+.hc-goal-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 8px !important;
+}
+
+.hc-goal-name {
+    font-weight: 600 !important;
+    color: #333 !important;
+}
+
+.hc-goal-amount {
+    font-size: 14px !important;
+    color: var(--hc-primary) !important;
+    font-weight: 600 !important;
+}
+
+.hc-goal-progress {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 8px !important;
+}
+
+.hc-goal-bar {
+    flex: 1 !important;
+    height: 6px !important;
+    background: #e9ecef !important;
+    border-radius: 3px !important;
+    overflow: hidden !important;
+}
+
+.hc-goal-fill {
+    height: 100% !important;
+    background: var(--hc-gradient) !important;
+    border-radius: 3px !important;
+    transition: width 0.8s ease !important;
+}
+
+.hc-goal-percent {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: var(--hc-primary) !important;
+}
+
+.hc-goal-deadline {
+    font-size: 12px !important;
+    color: #666 !important;
+}
+
+.hc-add-goal-btn {
+    width: 100% !important;
+    padding: 12px !important;
+    background: transparent !important;
+    border: 2px dashed var(--hc-primary) !important;
+    color: var(--hc-primary) !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.hc-add-goal-btn:hover {
+    background: rgba(255, 107, 53, 0.05) !important;
+}
+
+.hc-goal-suggestions {
+    border-top: 1px solid #f0f2f5 !important;
+    padding-top: 24px !important;
+}
+
+.hc-goal-suggestions h5 {
+    margin: 0 0 16px 0 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+}
+
+.hc-suggestion-buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.hc-suggestion-buttons button {
+    padding: 8px 16px !important;
+    background: white !important;
+    border: 1px solid var(--hc-border) !important;
+    border-radius: 20px !important;
+    color: #666 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-size: 13px !important;
+}
+
+.hc-suggestion-buttons button:hover {
+    background: var(--hc-primary) !important;
+    color: white !important;
+    border-color: var(--hc-primary) !important;
+}
+
+/* Footer */
+.hc-dashboard-footer {
+    padding: 24px !important;
+    background: #f8f9ff !important;
+    border-radius: 0 0 20px 20px !important;
+    text-align: center !important;
+}
+
+.hc-update-data-btn {
+    background: var(--hc-gradient) !important;
+    color: white !important;
+    border: none !important;
+    padding: 14px 28px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.hc-update-data-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hc-dashboard-content {
+        width: 98vw !important;
+        margin: 1vh !important;
+    }
+    
+    .hc-health-score-card {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 20px !important;
+    }
+    
+    .hc-overview-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hc-goals-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hc-dashboard-tabs {
+        flex-wrap: wrap !important;
+    }
+    
+    .hc-tab-btn {
+        flex: 1 1 50% !important;
+    }
+}
