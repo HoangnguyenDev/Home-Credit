@@ -1,8 +1,6 @@
-Dưới đây là bài viết toàn diện về **Home Credit** tại Việt Nam, được thiết kế để cung cấp thông tin chi tiết, hấp dẫn và tối ưu hóa cho công cụ tìm kiếm, dựa trên các tài liệu bạn đã cung cấp:
-
----
-
 # **Home Credit Việt Nam: Trao Quyền Làm Chủ Tài Chính cho Mọi Gia Đình Việt**
+
+<img width="2880" height="1200" alt="image" src="https://github.com/user-attachments/assets/212201d5-0125-4364-a68f-c3b09dd62248" />
 
 Trong bối cảnh nền kinh tế số phát triển mạnh mẽ, việc tiếp cận các giải pháp tài chính toàn diện, minh bạch và tiện lợi trở thành nhu cầu thiết yếu của hàng triệu người dân Việt Nam. Nổi bật như một trong những công ty tài chính số hàng đầu, **Home Credit Việt Nam** đã và đang khẳng định vị thế của mình trong suốt 17 năm qua, trở thành đối tác đáng tin cậy giúp khách hàng hiện thực hóa ước mơ và nâng cao chất lượng cuộc sống.
 
@@ -11,6 +9,8 @@ Trong bối cảnh nền kinh tế số phát triển mạnh mẽ, việc tiếp
 ## **I. Giới thiệu về Home Credit Việt Nam – Đối tác Tài chính số Tin cậy của Mọi Gia Đình**
 
 Là một phần của tập đoàn tài chính quốc tế với kinh nghiệm lâu năm, **Home Credit Việt Nam** tự hào là đơn vị tiên phong trong lĩnh vực tài chính số tại thị trường Việt Nam.
+
+<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2fbebcd6-0615-43e2-9d7d-96545b820faa" />
 
 ### **A. Home Credit: Chặng đường 17 năm đồng hành cùng 16 triệu khách hàng Việt**
 
@@ -55,6 +55,9 @@ Văn hóa của **Home Credit** được xây dựng dựa trên bộ 8 Phẩm c
 *   Là công dân Việt Nam, độ tuổi từ 20 đến 60 tuổi.
 *   Có CCCD/CMND/Căn cước chính chủ, còn hiệu lực.
 *   Trong một số trường hợp, khách hàng có thể cung cấp thêm hóa đơn liên quan để vay với hạn mức cao hơn, nhưng vẫn không cần tài sản đảm bảo.
+
+<img width="1440" height="600" alt="image" src="https://github.com/user-attachments/assets/88170211-1045-4498-b923-bf2b2a1bc045" />
+
 
 #### **3. Hướng dẫn vay tiền mặt chỉ với CCCD/CMND**
 **Home Credit** cung cấp nhiều phương thức đăng ký vay tiền mặt tiện lợi, bao gồm trực tuyến qua website và ứng dụng **Home Credit**, hoặc qua ví điện tử MoMo.
